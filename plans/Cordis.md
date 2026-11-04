@@ -1,6 +1,6 @@
 # Cordis Runtime Refactor
 
-Status: draft, not checked in. Explores refactoring the framework onto a
+Status: draft, in progress. Explores refactoring the framework onto a
 [Cordis](https://github.com/dshbox/cordis-rs)-like structure: a typed runtime for
 plugin-oriented Rust applications (`Context`, `Plugin` → `prepare`/`Input`/
 `PreparedPlugin` → `spawn` → `FiberHandle`, typed `Service` with realms, typed
