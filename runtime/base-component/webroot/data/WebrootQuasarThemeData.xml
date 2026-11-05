@@ -44,11 +44,58 @@ along with this software (see the LICENSE.md file). If not, see
     <moqui.screen.ScreenThemeResource screenThemeId="DEFAULT_QUASAR" sequenceNum="20" resourceTypeEnumId="STRT_STYLESHEET"
             resourceValue="/css/WebrootVue.qvt.css"/>
 
+    <!-- Fonts a user may choose (THEME_FONT_BODY, THEME_FONT_HEADING, THEME_FONT_MONO); without a choice the style sheet's Roboto
+         and system mono stacks. The web fonts load from Google Fonts, as the theme's Roboto does. -->
+    <moqui.screen.ScreenFontOption fontOptionId="SYSTEM_SANS" fontKindEnumId="SFK_SANS" sequenceNum="1" description="System"
+            fontFamily="system-ui, -apple-system, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif"/>
+    <moqui.screen.ScreenFontOption fontOptionId="ROBOTO" fontKindEnumId="SFK_SANS" sequenceNum="2" description="Roboto"
+            fontFamily="Roboto, -apple-system, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif"
+            stylesheetLocation="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"/>
+    <moqui.screen.ScreenFontOption fontOptionId="INTER" fontKindEnumId="SFK_SANS" sequenceNum="3" description="Inter"
+            fontFamily="Inter, system-ui, sans-serif"
+            stylesheetLocation="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"/>
+    <moqui.screen.ScreenFontOption fontOptionId="SOURCE_SANS" fontKindEnumId="SFK_SANS" sequenceNum="4" description="Source Sans 3"
+            fontFamily="&quot;Source Sans 3&quot;, system-ui, sans-serif"
+            stylesheetLocation="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;display=swap"/>
+    <moqui.screen.ScreenFontOption fontOptionId="ATKINSON" fontKindEnumId="SFK_SANS" sequenceNum="5" description="Atkinson Hyperlegible (easy to read)"
+            fontFamily="&quot;Atkinson Hyperlegible&quot;, system-ui, sans-serif"
+            stylesheetLocation="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap"/>
+    <moqui.screen.ScreenFontOption fontOptionId="ORBITRON" fontKindEnumId="SFK_SANS" sequenceNum="6" description="Orbitron (the Lab scheme's headings)"
+            fontFamily="&quot;Orbitron&quot;, system-ui, sans-serif"
+            stylesheetLocation="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&amp;display=swap"/>
+    <moqui.screen.ScreenFontOption fontOptionId="BARLOW" fontKindEnumId="SFK_SANS" sequenceNum="7" description="Barlow (the Lab scheme's text)"
+            fontFamily="&quot;Barlow&quot;, system-ui, sans-serif"
+            stylesheetLocation="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;display=swap"/>
+    <!-- the body fonts of the Windows 11 and Plasma schemes: Segoe UI is the system's font on Windows (no style sheet), Noto Sans
+         is loaded -->
+    <moqui.screen.ScreenFontOption fontOptionId="SEGOE_UI" fontKindEnumId="SFK_SANS" sequenceNum="8" description="Segoe UI (the Windows 11 scheme's text)"
+            fontFamily="&quot;Segoe UI&quot;, &quot;Segoe UI Variable Text&quot;, system-ui, sans-serif"/>
+    <moqui.screen.ScreenFontOption fontOptionId="NOTO_SANS" fontKindEnumId="SFK_SANS" sequenceNum="9" description="Noto Sans (the Plasma scheme's text)"
+            fontFamily="&quot;Noto Sans&quot;, system-ui, sans-serif"
+            stylesheetLocation="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap"/>
+    <moqui.screen.ScreenFontOption fontOptionId="SYSTEM_SERIF" fontKindEnumId="SFK_SERIF" sequenceNum="11" description="System Serif"
+            fontFamily="Georgia, Cambria, &quot;Times New Roman&quot;, serif"/>
+    <moqui.screen.ScreenFontOption fontOptionId="MERRIWEATHER" fontKindEnumId="SFK_SERIF" sequenceNum="12" description="Merriweather"
+            fontFamily="Merriweather, Georgia, serif"
+            stylesheetLocation="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&amp;display=swap"/>
+    <moqui.screen.ScreenFontOption fontOptionId="SOURCE_SERIF" fontKindEnumId="SFK_SERIF" sequenceNum="13" description="Source Serif 4"
+            fontFamily="&quot;Source Serif 4&quot;, Georgia, serif"
+            stylesheetLocation="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap"/>
+    <moqui.screen.ScreenFontOption fontOptionId="SYSTEM_MONO" fontKindEnumId="SFK_MONO" sequenceNum="21" description="System Mono"
+            fontFamily="ui-monospace, SFMono-Regular, Menlo, Consolas, &quot;Liberation Mono&quot;, monospace"/>
+    <moqui.screen.ScreenFontOption fontOptionId="JETBRAINS_MONO" fontKindEnumId="SFK_MONO" sequenceNum="22" description="JetBrains Mono"
+            fontFamily="&quot;JetBrains Mono&quot;, ui-monospace, monospace"
+            stylesheetLocation="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&amp;display=swap"/>
+    <moqui.screen.ScreenFontOption fontOptionId="IBM_PLEX_MONO" fontKindEnumId="SFK_MONO" sequenceNum="23" description="IBM Plex Mono"
+            fontFamily="&quot;IBM Plex Mono&quot;, ui-monospace, monospace"
+            stylesheetLocation="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&amp;display=swap"/>
+
     <!-- Color schemes (THEME_COLOR_SCHEME; docs/ui/Qvt-Client.md, Appearance). Default has no colors, so it is the theme's own (the style
          sheet's tokens and the STRT_QUASAR_CONFIG brand); the others set the standard colors for light and dark. The header stays a
          light surface in light mode, so the tint of a dev or test instance (body.dev #top) still reads. -->
     <moqui.screen.ScreenColorScheme colorSchemeId="DEFAULT" screenThemeId="DEFAULT_QUASAR" sequenceNum="1" description="Default"/>
-    <moqui.screen.ScreenColorScheme colorSchemeId="SLATE" screenThemeId="DEFAULT_QUASAR" sequenceNum="2" description="Slate"/>
+    <moqui.screen.ScreenColorScheme colorSchemeId="SLATE" screenThemeId="DEFAULT_QUASAR" sequenceNum="2" description="Slate"
+            extraCss="body #top { background:linear-gradient(90deg,#0f172a,var(--q-primary)) !important; } body:not(.body--dark) #top { color:#ffffff !important; } body.body--dark #top { background:linear-gradient(90deg,var(--m-header-bg),color-mix(in srgb,var(--q-primary) 35%,var(--m-header-bg))) !important; } body:not(.body--dark) { background:linear-gradient(180deg,color-mix(in srgb,var(--q-primary) 7%,var(--m-page-bg)),var(--m-page-bg) 260px) !important; } body:not(.body--dark) .q-page { background:linear-gradient(180deg,color-mix(in srgb,var(--q-primary) 7%,var(--m-page-bg)),var(--m-page-bg) 260px) !important; } body.body--dark { background:linear-gradient(180deg,color-mix(in srgb,var(--q-primary) 10%,var(--m-page-bg)),var(--m-page-bg) 260px) !important; } body :is(.q-btn.bg-primary, .q-btn--primary):not(.q-btn--flat):not(.q-btn--round) { background-image:linear-gradient(135deg,var(--q-primary),color-mix(in srgb,var(--q-primary) 40%,var(--q-secondary))) !important; } body .m-drawer &gt; .q-item.m-drawer-on-path, body .m-drawer &gt; .q-item.m-drawer-current { background:color-mix(in srgb,var(--q-accent) 15%,var(--m-drawer-bg)) !important; }"/>
     <moqui.screen.ScreenColorSchemeColor colorSchemeId="SLATE" colorModeEnumId="SCM_LIGHT" colorName="primary" colorValue="#2563eb"/>
     <moqui.screen.ScreenColorSchemeColor colorSchemeId="SLATE" colorModeEnumId="SCM_LIGHT" colorName="secondary" colorValue="#0f766e"/>
     <moqui.screen.ScreenColorSchemeColor colorSchemeId="SLATE" colorModeEnumId="SCM_LIGHT" colorName="accent" colorValue="#7c3aed"/>
@@ -76,7 +123,8 @@ along with this software (see the LICENSE.md file). If not, see
     <moqui.screen.ScreenColorSchemeColor colorSchemeId="SLATE" colorModeEnumId="SCM_DARK" colorName="link" colorValue="#93c5fd"/>
     <moqui.screen.ScreenColorSchemeColor colorSchemeId="SLATE" colorModeEnumId="SCM_DARK" colorName="negative-text" colorValue="#fca5a5"/>
 
-    <moqui.screen.ScreenColorScheme colorSchemeId="FOREST" screenThemeId="DEFAULT_QUASAR" sequenceNum="3" description="Forest"/>
+    <moqui.screen.ScreenColorScheme colorSchemeId="FOREST" screenThemeId="DEFAULT_QUASAR" sequenceNum="3" description="Forest"
+            extraCss="body #top { background:linear-gradient(90deg,#1b2a1c,var(--q-primary)) !important; } body:not(.body--dark) #top { color:#ffffff !important; } body.body--dark #top { background:linear-gradient(90deg,var(--m-header-bg),color-mix(in srgb,var(--q-primary) 35%,var(--m-header-bg))) !important; } body:not(.body--dark) { background:linear-gradient(180deg,color-mix(in srgb,var(--q-primary) 7%,var(--m-page-bg)),var(--m-page-bg) 260px) !important; } body:not(.body--dark) .q-page { background:linear-gradient(180deg,color-mix(in srgb,var(--q-primary) 7%,var(--m-page-bg)),var(--m-page-bg) 260px) !important; } body.body--dark { background:linear-gradient(180deg,color-mix(in srgb,var(--q-primary) 10%,var(--m-page-bg)),var(--m-page-bg) 260px) !important; } body :is(.q-btn.bg-primary, .q-btn--primary):not(.q-btn--flat):not(.q-btn--round) { background-image:linear-gradient(135deg,var(--q-primary),color-mix(in srgb,var(--q-primary) 40%,var(--q-secondary))) !important; } body .m-drawer &gt; .q-item.m-drawer-on-path, body .m-drawer &gt; .q-item.m-drawer-current { background:color-mix(in srgb,var(--q-accent) 15%,var(--m-drawer-bg)) !important; }"/>
     <moqui.screen.ScreenColorSchemeColor colorSchemeId="FOREST" colorModeEnumId="SCM_LIGHT" colorName="primary" colorValue="#2e7d32"/>
     <moqui.screen.ScreenColorSchemeColor colorSchemeId="FOREST" colorModeEnumId="SCM_LIGHT" colorName="secondary" colorValue="#00796b"/>
     <moqui.screen.ScreenColorSchemeColor colorSchemeId="FOREST" colorModeEnumId="SCM_LIGHT" colorName="accent" colorValue="#8e5b16"/>
@@ -104,7 +152,8 @@ along with this software (see the LICENSE.md file). If not, see
     <moqui.screen.ScreenColorSchemeColor colorSchemeId="FOREST" colorModeEnumId="SCM_DARK" colorName="link" colorValue="#81c784"/>
     <moqui.screen.ScreenColorSchemeColor colorSchemeId="FOREST" colorModeEnumId="SCM_DARK" colorName="negative-text" colorValue="#ef9a9a"/>
 
-    <moqui.screen.ScreenColorScheme colorSchemeId="WARM" screenThemeId="DEFAULT_QUASAR" sequenceNum="4" description="Warm"/>
+    <moqui.screen.ScreenColorScheme colorSchemeId="WARM" screenThemeId="DEFAULT_QUASAR" sequenceNum="4" description="Warm"
+            extraCss="body #top { background:linear-gradient(90deg,#3b2f25,var(--q-primary)) !important; } body:not(.body--dark) #top { color:#ffffff !important; } body.body--dark #top { background:linear-gradient(90deg,var(--m-header-bg),color-mix(in srgb,var(--q-primary) 35%,var(--m-header-bg))) !important; } body:not(.body--dark) { background:linear-gradient(180deg,color-mix(in srgb,var(--q-primary) 7%,var(--m-page-bg)),var(--m-page-bg) 260px) !important; } body:not(.body--dark) .q-page { background:linear-gradient(180deg,color-mix(in srgb,var(--q-primary) 7%,var(--m-page-bg)),var(--m-page-bg) 260px) !important; } body.body--dark { background:linear-gradient(180deg,color-mix(in srgb,var(--q-primary) 10%,var(--m-page-bg)),var(--m-page-bg) 260px) !important; } body :is(.q-btn.bg-primary, .q-btn--primary):not(.q-btn--flat):not(.q-btn--round) { background-image:linear-gradient(135deg,var(--q-primary),color-mix(in srgb,var(--q-primary) 40%,var(--q-accent))) !important; } body .m-drawer &gt; .q-item.m-drawer-on-path, body .m-drawer &gt; .q-item.m-drawer-current { background:color-mix(in srgb,var(--q-accent) 15%,var(--m-drawer-bg)) !important; }"/>
     <moqui.screen.ScreenColorSchemeColor colorSchemeId="WARM" colorModeEnumId="SCM_LIGHT" colorName="primary" colorValue="#8d5524"/>
     <moqui.screen.ScreenColorSchemeColor colorSchemeId="WARM" colorModeEnumId="SCM_LIGHT" colorName="secondary" colorValue="#5f7d66"/>
     <moqui.screen.ScreenColorSchemeColor colorSchemeId="WARM" colorModeEnumId="SCM_LIGHT" colorName="accent" colorValue="#a14d1b"/>
@@ -164,42 +213,381 @@ along with this software (see the LICENSE.md file). If not, see
     <moqui.screen.ScreenColorSchemeColor colorSchemeId="HIGH_CONTRAST" colorModeEnumId="SCM_DARK" colorName="border" colorValue="rgba(255,255,255,.7)"/>
     <moqui.screen.ScreenColorSchemeColor colorSchemeId="HIGH_CONTRAST" colorModeEnumId="SCM_DARK" colorName="divider" colorValue="rgba(255,255,255,.45)"/>
 
-    <!-- Fonts a user may choose (THEME_FONT_BODY, THEME_FONT_HEADING, THEME_FONT_MONO); without a choice the style sheet's Roboto
-         and system mono stacks. The web fonts load from Google Fonts, as the theme's Roboto does. -->
-    <moqui.screen.ScreenFontOption fontOptionId="SYSTEM_SANS" fontKindEnumId="SFK_SANS" sequenceNum="1" description="System"
-            fontFamily="system-ui, -apple-system, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif"/>
-    <moqui.screen.ScreenFontOption fontOptionId="ROBOTO" fontKindEnumId="SFK_SANS" sequenceNum="2" description="Roboto"
-            fontFamily="Roboto, -apple-system, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif"
-            stylesheetLocation="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"/>
-    <moqui.screen.ScreenFontOption fontOptionId="INTER" fontKindEnumId="SFK_SANS" sequenceNum="3" description="Inter"
-            fontFamily="Inter, system-ui, sans-serif"
-            stylesheetLocation="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"/>
-    <moqui.screen.ScreenFontOption fontOptionId="SOURCE_SANS" fontKindEnumId="SFK_SANS" sequenceNum="4" description="Source Sans 3"
-            fontFamily="&quot;Source Sans 3&quot;, system-ui, sans-serif"
-            stylesheetLocation="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;display=swap"/>
-    <moqui.screen.ScreenFontOption fontOptionId="ATKINSON" fontKindEnumId="SFK_SANS" sequenceNum="5" description="Atkinson Hyperlegible (easy to read)"
-            fontFamily="&quot;Atkinson Hyperlegible&quot;, system-ui, sans-serif"
-            stylesheetLocation="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap"/>
-    <moqui.screen.ScreenFontOption fontOptionId="SYSTEM_SERIF" fontKindEnumId="SFK_SERIF" sequenceNum="11" description="System Serif"
-            fontFamily="Georgia, Cambria, &quot;Times New Roman&quot;, serif"/>
-    <moqui.screen.ScreenFontOption fontOptionId="MERRIWEATHER" fontKindEnumId="SFK_SERIF" sequenceNum="12" description="Merriweather"
-            fontFamily="Merriweather, Georgia, serif"
-            stylesheetLocation="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&amp;display=swap"/>
-    <moqui.screen.ScreenFontOption fontOptionId="SOURCE_SERIF" fontKindEnumId="SFK_SERIF" sequenceNum="13" description="Source Serif 4"
-            fontFamily="&quot;Source Serif 4&quot;, Georgia, serif"
-            stylesheetLocation="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap"/>
-    <moqui.screen.ScreenFontOption fontOptionId="SYSTEM_MONO" fontKindEnumId="SFK_MONO" sequenceNum="21" description="System Mono"
-            fontFamily="ui-monospace, SFMono-Regular, Menlo, Consolas, &quot;Liberation Mono&quot;, monospace"/>
-    <moqui.screen.ScreenFontOption fontOptionId="JETBRAINS_MONO" fontKindEnumId="SFK_MONO" sequenceNum="22" description="JetBrains Mono"
-            fontFamily="&quot;JetBrains Mono&quot;, ui-monospace, monospace"
-            stylesheetLocation="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&amp;display=swap"/>
-    <moqui.screen.ScreenFontOption fontOptionId="IBM_PLEX_MONO" fontKindEnumId="SFK_MONO" sequenceNum="23" description="IBM Plex Mono"
-            fontFamily="&quot;IBM Plex Mono&quot;, ui-monospace, monospace"
-            stylesheetLocation="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&amp;display=swap"/>
+    <!-- A set of default themes for a corporate look: each sets the standard colors for light and dark (the tokens of the style
+         sheet without their prefix), and the extra CSS carries the look: the brand-gradient header (dark with white text in light
+         mode), the page wash toward the brand, the gradient primary buttons, and the complementary accent on the drawer's current
+         app. -->
+    <moqui.screen.ScreenColorScheme colorSchemeId="OCEAN" screenThemeId="DEFAULT_QUASAR" sequenceNum="6" description="Ocean"
+            extraCss="body #top { background:linear-gradient(90deg,#0d2137,var(--q-primary)) !important; } body:not(.body--dark) #top { color:#ffffff !important; } body.body--dark #top { background:linear-gradient(90deg,var(--m-header-bg),color-mix(in srgb,var(--q-primary) 35%,var(--m-header-bg))) !important; } body:not(.body--dark) { background:linear-gradient(180deg,color-mix(in srgb,var(--q-primary) 7%,var(--m-page-bg)),var(--m-page-bg) 260px) !important; } body:not(.body--dark) .q-page { background:linear-gradient(180deg,color-mix(in srgb,var(--q-primary) 7%,var(--m-page-bg)),var(--m-page-bg) 260px) !important; } body.body--dark { background:linear-gradient(180deg,color-mix(in srgb,var(--q-primary) 10%,var(--m-page-bg)),var(--m-page-bg) 260px) !important; } body :is(.q-btn.bg-primary, .q-btn--primary):not(.q-btn--flat):not(.q-btn--round) { background-image:linear-gradient(135deg,var(--q-primary),color-mix(in srgb,var(--q-primary) 40%,var(--q-secondary))) !important; } body .m-drawer &gt; .q-item.m-drawer-on-path, body .m-drawer &gt; .q-item.m-drawer-current { background:color-mix(in srgb,var(--q-accent) 15%,var(--m-drawer-bg)) !important; }"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OCEAN" colorModeEnumId="SCM_LIGHT" colorName="primary" colorValue="#1565c0"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OCEAN" colorModeEnumId="SCM_LIGHT" colorName="secondary" colorValue="#00838f"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OCEAN" colorModeEnumId="SCM_LIGHT" colorName="accent" colorValue="#5e35b1"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OCEAN" colorModeEnumId="SCM_LIGHT" colorName="positive" colorValue="#2e7d32"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OCEAN" colorModeEnumId="SCM_LIGHT" colorName="negative" colorValue="#c62828"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OCEAN" colorModeEnumId="SCM_LIGHT" colorName="info" colorValue="#0277bd"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OCEAN" colorModeEnumId="SCM_LIGHT" colorName="warning" colorValue="#ef6c00"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OCEAN" colorModeEnumId="SCM_LIGHT" colorName="page-bg" colorValue="#eef3f8"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OCEAN" colorModeEnumId="SCM_LIGHT" colorName="panel-bg" colorValue="#ffffff"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OCEAN" colorModeEnumId="SCM_LIGHT" colorName="header-bg" colorValue="#ffffff"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OCEAN" colorModeEnumId="SCM_LIGHT" colorName="header-fg" colorValue="#0d2137"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OCEAN" colorModeEnumId="SCM_LIGHT" colorName="drawer-bg" colorValue="#f5f8fb"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OCEAN" colorModeEnumId="SCM_LIGHT" colorName="text" colorValue="#0d2137"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OCEAN" colorModeEnumId="SCM_LIGHT" colorName="text-muted" colorValue="#4a5a6a"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OCEAN" colorModeEnumId="SCM_DARK" colorName="primary" colorValue="#42a5f5"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OCEAN" colorModeEnumId="SCM_DARK" colorName="secondary" colorValue="#26c6da"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OCEAN" colorModeEnumId="SCM_DARK" colorName="accent" colorValue="#9575cd"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OCEAN" colorModeEnumId="SCM_DARK" colorName="page-bg" colorValue="#0a1420"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OCEAN" colorModeEnumId="SCM_DARK" colorName="panel-bg" colorValue="#12202e"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OCEAN" colorModeEnumId="SCM_DARK" colorName="header-bg" colorValue="#0f1c2a"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OCEAN" colorModeEnumId="SCM_DARK" colorName="header-fg" colorValue="#dbe7f3"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OCEAN" colorModeEnumId="SCM_DARK" colorName="drawer-bg" colorValue="#0e1a26"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OCEAN" colorModeEnumId="SCM_DARK" colorName="text" colorValue="#dbe7f3"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OCEAN" colorModeEnumId="SCM_DARK" colorName="text-muted" colorValue="#93a7bb"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OCEAN" colorModeEnumId="SCM_DARK" colorName="link" colorValue="#90caf9"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OCEAN" colorModeEnumId="SCM_DARK" colorName="negative-text" colorValue="#ef9a9a"/>
 
+    <moqui.screen.ScreenColorScheme colorSchemeId="INDIGO" screenThemeId="DEFAULT_QUASAR" sequenceNum="7" description="Indigo"
+            extraCss="body #top { background:linear-gradient(90deg,#1e1b4b,var(--q-primary)) !important; } body:not(.body--dark) #top { color:#ffffff !important; } body.body--dark #top { background:linear-gradient(90deg,var(--m-header-bg),color-mix(in srgb,var(--q-primary) 35%,var(--m-header-bg))) !important; } body:not(.body--dark) { background:linear-gradient(180deg,color-mix(in srgb,var(--q-primary) 7%,var(--m-page-bg)),var(--m-page-bg) 260px) !important; } body:not(.body--dark) .q-page { background:linear-gradient(180deg,color-mix(in srgb,var(--q-primary) 7%,var(--m-page-bg)),var(--m-page-bg) 260px) !important; } body.body--dark { background:linear-gradient(180deg,color-mix(in srgb,var(--q-primary) 10%,var(--m-page-bg)),var(--m-page-bg) 260px) !important; } body :is(.q-btn.bg-primary, .q-btn--primary):not(.q-btn--flat):not(.q-btn--round) { background-image:linear-gradient(135deg,var(--q-primary),color-mix(in srgb,var(--q-primary) 40%,var(--q-accent))) !important; } body .m-drawer &gt; .q-item.m-drawer-on-path, body .m-drawer &gt; .q-item.m-drawer-current { background:color-mix(in srgb,var(--q-accent) 15%,var(--m-drawer-bg)) !important; }"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="INDIGO" colorModeEnumId="SCM_LIGHT" colorName="primary" colorValue="#4f46e5"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="INDIGO" colorModeEnumId="SCM_LIGHT" colorName="secondary" colorValue="#0d9488"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="INDIGO" colorModeEnumId="SCM_LIGHT" colorName="accent" colorValue="#c026d3"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="INDIGO" colorModeEnumId="SCM_LIGHT" colorName="positive" colorValue="#16a34a"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="INDIGO" colorModeEnumId="SCM_LIGHT" colorName="negative" colorValue="#dc2626"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="INDIGO" colorModeEnumId="SCM_LIGHT" colorName="info" colorValue="#2563eb"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="INDIGO" colorModeEnumId="SCM_LIGHT" colorName="warning" colorValue="#d97706"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="INDIGO" colorModeEnumId="SCM_LIGHT" colorName="page-bg" colorValue="#f4f4fb"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="INDIGO" colorModeEnumId="SCM_LIGHT" colorName="panel-bg" colorValue="#ffffff"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="INDIGO" colorModeEnumId="SCM_LIGHT" colorName="header-bg" colorValue="#ffffff"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="INDIGO" colorModeEnumId="SCM_LIGHT" colorName="header-fg" colorValue="#1e1b4b"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="INDIGO" colorModeEnumId="SCM_LIGHT" colorName="drawer-bg" colorValue="#f8f7fd"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="INDIGO" colorModeEnumId="SCM_LIGHT" colorName="text" colorValue="#1e1b4b"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="INDIGO" colorModeEnumId="SCM_LIGHT" colorName="text-muted" colorValue="#52517a"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="INDIGO" colorModeEnumId="SCM_DARK" colorName="primary" colorValue="#818cf8"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="INDIGO" colorModeEnumId="SCM_DARK" colorName="secondary" colorValue="#2dd4bf"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="INDIGO" colorModeEnumId="SCM_DARK" colorName="accent" colorValue="#e879f9"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="INDIGO" colorModeEnumId="SCM_DARK" colorName="page-bg" colorValue="#0f0e1a"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="INDIGO" colorModeEnumId="SCM_DARK" colorName="panel-bg" colorValue="#1a1830"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="INDIGO" colorModeEnumId="SCM_DARK" colorName="header-bg" colorValue="#171530"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="INDIGO" colorModeEnumId="SCM_DARK" colorName="header-fg" colorValue="#e0e0f5"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="INDIGO" colorModeEnumId="SCM_DARK" colorName="drawer-bg" colorValue="#14122a"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="INDIGO" colorModeEnumId="SCM_DARK" colorName="text" colorValue="#e0e0f5"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="INDIGO" colorModeEnumId="SCM_DARK" colorName="text-muted" colorValue="#9d9cc4"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="INDIGO" colorModeEnumId="SCM_DARK" colorName="link" colorValue="#a5b4fc"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="INDIGO" colorModeEnumId="SCM_DARK" colorName="negative-text" colorValue="#fca5a5"/>
+
+    <moqui.screen.ScreenColorScheme colorSchemeId="CRIMSON" screenThemeId="DEFAULT_QUASAR" sequenceNum="8" description="Crimson"
+            extraCss="body #top { background:linear-gradient(90deg,#3b0d1c,var(--q-primary)) !important; } body:not(.body--dark) #top { color:#ffffff !important; } body.body--dark #top { background:linear-gradient(90deg,var(--m-header-bg),color-mix(in srgb,var(--q-primary) 35%,var(--m-header-bg))) !important; } body:not(.body--dark) { background:linear-gradient(180deg,color-mix(in srgb,var(--q-primary) 7%,var(--m-page-bg)),var(--m-page-bg) 260px) !important; } body:not(.body--dark) .q-page { background:linear-gradient(180deg,color-mix(in srgb,var(--q-primary) 7%,var(--m-page-bg)),var(--m-page-bg) 260px) !important; } body.body--dark { background:linear-gradient(180deg,color-mix(in srgb,var(--q-primary) 10%,var(--m-page-bg)),var(--m-page-bg) 260px) !important; } body :is(.q-btn.bg-primary, .q-btn--primary):not(.q-btn--flat):not(.q-btn--round) { background-image:linear-gradient(135deg,var(--q-primary),color-mix(in srgb,var(--q-primary) 40%,var(--q-accent))) !important; } body .m-drawer &gt; .q-item.m-drawer-on-path, body .m-drawer &gt; .q-item.m-drawer-current { background:color-mix(in srgb,var(--q-secondary) 15%,var(--m-drawer-bg)) !important; }"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="CRIMSON" colorModeEnumId="SCM_LIGHT" colorName="primary" colorValue="#9f1239"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="CRIMSON" colorModeEnumId="SCM_LIGHT" colorName="secondary" colorValue="#0f766e"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="CRIMSON" colorModeEnumId="SCM_LIGHT" colorName="accent" colorValue="#7c3aed"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="CRIMSON" colorModeEnumId="SCM_LIGHT" colorName="positive" colorValue="#15803d"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="CRIMSON" colorModeEnumId="SCM_LIGHT" colorName="negative" colorValue="#b91c1c"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="CRIMSON" colorModeEnumId="SCM_LIGHT" colorName="info" colorValue="#0369a1"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="CRIMSON" colorModeEnumId="SCM_LIGHT" colorName="warning" colorValue="#d97706"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="CRIMSON" colorModeEnumId="SCM_LIGHT" colorName="page-bg" colorValue="#faf4f5"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="CRIMSON" colorModeEnumId="SCM_LIGHT" colorName="panel-bg" colorValue="#ffffff"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="CRIMSON" colorModeEnumId="SCM_LIGHT" colorName="header-bg" colorValue="#ffffff"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="CRIMSON" colorModeEnumId="SCM_LIGHT" colorName="header-fg" colorValue="#3b0d1c"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="CRIMSON" colorModeEnumId="SCM_LIGHT" colorName="drawer-bg" colorValue="#fcf7f8"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="CRIMSON" colorModeEnumId="SCM_LIGHT" colorName="text" colorValue="#3b0d1c"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="CRIMSON" colorModeEnumId="SCM_LIGHT" colorName="text-muted" colorValue="#7a5560"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="CRIMSON" colorModeEnumId="SCM_DARK" colorName="primary" colorValue="#fb7185"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="CRIMSON" colorModeEnumId="SCM_DARK" colorName="secondary" colorValue="#14b8a6"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="CRIMSON" colorModeEnumId="SCM_DARK" colorName="accent" colorValue="#a78bfa"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="CRIMSON" colorModeEnumId="SCM_DARK" colorName="page-bg" colorValue="#180d10"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="CRIMSON" colorModeEnumId="SCM_DARK" colorName="panel-bg" colorValue="#241619"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="CRIMSON" colorModeEnumId="SCM_DARK" colorName="header-bg" colorValue="#201215"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="CRIMSON" colorModeEnumId="SCM_DARK" colorName="header-fg" colorValue="#f5e2e6"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="CRIMSON" colorModeEnumId="SCM_DARK" colorName="drawer-bg" colorValue="#1d1013"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="CRIMSON" colorModeEnumId="SCM_DARK" colorName="text" colorValue="#f5e2e6"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="CRIMSON" colorModeEnumId="SCM_DARK" colorName="text-muted" colorValue="#b5959d"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="CRIMSON" colorModeEnumId="SCM_DARK" colorName="link" colorValue="#fda4af"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="CRIMSON" colorModeEnumId="SCM_DARK" colorName="negative-text" colorValue="#fca5a5"/>
+
+    <moqui.screen.ScreenColorScheme colorSchemeId="TEAL" screenThemeId="DEFAULT_QUASAR" sequenceNum="9" description="Teal"
+            extraCss="body #top { background:linear-gradient(90deg,#0f2e2b,var(--q-primary)) !important; } body:not(.body--dark) #top { color:#ffffff !important; } body.body--dark #top { background:linear-gradient(90deg,var(--m-header-bg),color-mix(in srgb,var(--q-primary) 35%,var(--m-header-bg))) !important; } body:not(.body--dark) { background:linear-gradient(180deg,color-mix(in srgb,var(--q-primary) 7%,var(--m-page-bg)),var(--m-page-bg) 260px) !important; } body:not(.body--dark) .q-page { background:linear-gradient(180deg,color-mix(in srgb,var(--q-primary) 7%,var(--m-page-bg)),var(--m-page-bg) 260px) !important; } body.body--dark { background:linear-gradient(180deg,color-mix(in srgb,var(--q-primary) 10%,var(--m-page-bg)),var(--m-page-bg) 260px) !important; } body :is(.q-btn.bg-primary, .q-btn--primary):not(.q-btn--flat):not(.q-btn--round) { background-image:linear-gradient(135deg,var(--q-primary),color-mix(in srgb,var(--q-primary) 40%,var(--q-secondary))) !important; } body .m-drawer &gt; .q-item.m-drawer-on-path, body .m-drawer &gt; .q-item.m-drawer-current { background:color-mix(in srgb,var(--q-accent) 15%,var(--m-drawer-bg)) !important; }"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="TEAL" colorModeEnumId="SCM_LIGHT" colorName="primary" colorValue="#0f766e"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="TEAL" colorModeEnumId="SCM_LIGHT" colorName="secondary" colorValue="#1d4ed8"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="TEAL" colorModeEnumId="SCM_LIGHT" colorName="accent" colorValue="#b45309"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="TEAL" colorModeEnumId="SCM_LIGHT" colorName="positive" colorValue="#15803d"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="TEAL" colorModeEnumId="SCM_LIGHT" colorName="negative" colorValue="#b91c1c"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="TEAL" colorModeEnumId="SCM_LIGHT" colorName="info" colorValue="#0369a1"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="TEAL" colorModeEnumId="SCM_LIGHT" colorName="warning" colorValue="#d97706"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="TEAL" colorModeEnumId="SCM_LIGHT" colorName="page-bg" colorValue="#eff6f5"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="TEAL" colorModeEnumId="SCM_LIGHT" colorName="panel-bg" colorValue="#ffffff"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="TEAL" colorModeEnumId="SCM_LIGHT" colorName="header-bg" colorValue="#ffffff"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="TEAL" colorModeEnumId="SCM_LIGHT" colorName="header-fg" colorValue="#0f2e2b"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="TEAL" colorModeEnumId="SCM_LIGHT" colorName="drawer-bg" colorValue="#f4faf9"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="TEAL" colorModeEnumId="SCM_LIGHT" colorName="text" colorValue="#0f2e2b"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="TEAL" colorModeEnumId="SCM_LIGHT" colorName="text-muted" colorValue="#4a6a66"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="TEAL" colorModeEnumId="SCM_DARK" colorName="primary" colorValue="#2dd4bf"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="TEAL" colorModeEnumId="SCM_DARK" colorName="secondary" colorValue="#60a5fa"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="TEAL" colorModeEnumId="SCM_DARK" colorName="accent" colorValue="#fbbf24"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="TEAL" colorModeEnumId="SCM_DARK" colorName="page-bg" colorValue="#0a1a18"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="TEAL" colorModeEnumId="SCM_DARK" colorName="panel-bg" colorValue="#122422"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="TEAL" colorModeEnumId="SCM_DARK" colorName="header-bg" colorValue="#0f201e"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="TEAL" colorModeEnumId="SCM_DARK" colorName="header-fg" colorValue="#d8efe9"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="TEAL" colorModeEnumId="SCM_DARK" colorName="drawer-bg" colorValue="#0e1e1c"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="TEAL" colorModeEnumId="SCM_DARK" colorName="text" colorValue="#d8efe9"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="TEAL" colorModeEnumId="SCM_DARK" colorName="text-muted" colorValue="#8fb3ad"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="TEAL" colorModeEnumId="SCM_DARK" colorName="link" colorValue="#5eead4"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="TEAL" colorModeEnumId="SCM_DARK" colorName="negative-text" colorValue="#fca5a5"/>
+
+    <!-- Graphite: a neutral, brand-free look (a grey primary) for a system that carries its own brand elsewhere -->
+    <moqui.screen.ScreenColorScheme colorSchemeId="GRAPHITE" screenThemeId="DEFAULT_QUASAR" sequenceNum="10" description="Graphite"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="GRAPHITE" colorModeEnumId="SCM_LIGHT" colorName="primary" colorValue="#37474f"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="GRAPHITE" colorModeEnumId="SCM_LIGHT" colorName="secondary" colorValue="#455a64"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="GRAPHITE" colorModeEnumId="SCM_LIGHT" colorName="accent" colorValue="#546e7a"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="GRAPHITE" colorModeEnumId="SCM_LIGHT" colorName="positive" colorValue="#2e7d32"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="GRAPHITE" colorModeEnumId="SCM_LIGHT" colorName="negative" colorValue="#c62828"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="GRAPHITE" colorModeEnumId="SCM_LIGHT" colorName="info" colorValue="#0277bd"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="GRAPHITE" colorModeEnumId="SCM_LIGHT" colorName="warning" colorValue="#ef6c00"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="GRAPHITE" colorModeEnumId="SCM_LIGHT" colorName="page-bg" colorValue="#f5f6f7"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="GRAPHITE" colorModeEnumId="SCM_LIGHT" colorName="panel-bg" colorValue="#ffffff"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="GRAPHITE" colorModeEnumId="SCM_LIGHT" colorName="header-bg" colorValue="#ffffff"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="GRAPHITE" colorModeEnumId="SCM_LIGHT" colorName="header-fg" colorValue="#263238"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="GRAPHITE" colorModeEnumId="SCM_LIGHT" colorName="drawer-bg" colorValue="#fafbfc"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="GRAPHITE" colorModeEnumId="SCM_LIGHT" colorName="text" colorValue="#263238"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="GRAPHITE" colorModeEnumId="SCM_LIGHT" colorName="text-muted" colorValue="#607d8b"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="GRAPHITE" colorModeEnumId="SCM_DARK" colorName="primary" colorValue="#90a4ae"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="GRAPHITE" colorModeEnumId="SCM_DARK" colorName="secondary" colorValue="#b0bec5"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="GRAPHITE" colorModeEnumId="SCM_DARK" colorName="accent" colorValue="#cfd8dc"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="GRAPHITE" colorModeEnumId="SCM_DARK" colorName="page-bg" colorValue="#121517"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="GRAPHITE" colorModeEnumId="SCM_DARK" colorName="panel-bg" colorValue="#1c2124"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="GRAPHITE" colorModeEnumId="SCM_DARK" colorName="header-bg" colorValue="#181d20"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="GRAPHITE" colorModeEnumId="SCM_DARK" colorName="header-fg" colorValue="#e3e8ea"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="GRAPHITE" colorModeEnumId="SCM_DARK" colorName="drawer-bg" colorValue="#161a1d"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="GRAPHITE" colorModeEnumId="SCM_DARK" colorName="text" colorValue="#e3e8ea"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="GRAPHITE" colorModeEnumId="SCM_DARK" colorName="text-muted" colorValue="#9aa7ad"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="GRAPHITE" colorModeEnumId="SCM_DARK" colorName="link" colorValue="#b0bec5"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="GRAPHITE" colorModeEnumId="SCM_DARK" colorName="negative-text" colorValue="#ef9a9a"/>
+
+    <!-- OpenStep: the NeXTSTEP/OpenStep look in light mode (a grey desktop, white document panels, a charcoal title bar and
+         white selected rows with black text), with a charcoal dark mode for screens that did not exist in NeXTSTEP. The extra
+         CSS bevels the window boxes and buttons, gives the title bar its edge, and keeps selected rows and active items white. -->
+    <moqui.screen.ScreenColorScheme colorSchemeId="OPENSTEP" screenThemeId="DEFAULT_QUASAR" sequenceNum="11" description="OpenStep"
+            extraCss="#top { font-weight:600; letter-spacing:.01em; } body:not(.body--dark) #top, body.body--dark #top { border-bottom:1px solid rgba(0,0,0,.55); box-shadow:inset 0 1px 0 rgba(255,255,255,.18); } body :is(.m-container-box &gt; .q-card, .q-card.m-board-card) { border:1px solid var(--m-border); box-shadow:2px 2px 0 rgba(0,0,0,.18); } body.body--dark :is(.m-container-box &gt; .q-card, .q-card.m-board-card) { box-shadow:2px 2px 0 rgba(0,0,0,.5); } body .q-btn:not(.q-btn--round) { border-radius:0 !important; } body .q-btn--round { border-radius:0 !important; } body .q-btn--flat:not(.m-link) { background:color-mix(in srgb, var(--m-text) 10%, var(--m-panel-bg)) !important; border:1px solid var(--m-border) !important; box-shadow:inset 1px 1px 0 rgba(255,255,255,.55), inset -1px -1px 0 rgba(0,0,0,.28), 1px 1px 0 rgba(0,0,0,.18) !important; } body .q-btn:not(.q-btn--flat):not(.q-btn--round) { border:1px solid var(--m-border) !important; box-shadow:inset 1px 1px 0 rgba(255,255,255,.55), inset -1px -1px 0 rgba(0,0,0,.28), 1px 1px 0 rgba(0,0,0,.18) !important; } body .q-btn--outline:not(.q-btn--round) { background:color-mix(in srgb, var(--m-text) 10%, var(--m-panel-bg)) !important; } body.body--dark .q-btn--flat:not(.m-link) { box-shadow:inset 1px 1px 0 rgba(255,255,255,.22), inset -1px -1px 0 rgba(0,0,0,.5), 1px 1px 0 rgba(0,0,0,.45) !important; } body.body--dark .q-btn:not(.q-btn--flat):not(.q-btn--round) { box-shadow:inset 1px 1px 0 rgba(255,255,255,.22), inset -1px -1px 0 rgba(0,0,0,.5), 1px 1px 0 rgba(0,0,0,.45) !important; } body .q-table tbody tr.selected td { background:#ffffff !important; color:#000000 !important; } body .q-table tbody tr.selected td:after { content:none !important; } body :is(.q-item.q-item--active, .q-item.q-router-link--active) { background:#ffffff !important; color:#000000 !important; } body .q-tree__node--selected > .q-tree__node-header { background:#ffffff !important; color:#000000 !important; } body .m-board-card--selected { background:#ffffff !important; color:#000000 !important; border-color:#000000 !important; box-shadow:0 0 0 1px #000000 !important; } body .m-drawer > .q-item.m-drawer-on-path { background:#ffffff !important; color:#000000 !important; } body .m-drawer > .q-item.m-drawer-current { background:#ffffff !important; color:#000000 !important; box-shadow:inset 3px 0 0 #000000 !important; } body #top .q-btn { background:transparent !important; border:0 !important; box-shadow:none !important; } body #top #m-search { color:var(--m-text) !important; background:color-mix(in srgb, var(--m-text) 10%, var(--m-panel-bg)) !important; border:1px solid var(--m-border) !important; box-shadow:inset 1px 1px 0 rgba(255,255,255,.55), inset -1px -1px 0 rgba(0,0,0,.28), 1px 1px 0 rgba(0,0,0,.18) !important; } body.body--dark #top #m-search { box-shadow:inset 1px 1px 0 rgba(255,255,255,.22), inset -1px -1px 0 rgba(0,0,0,.5), 1px 1px 0 rgba(0,0,0,.45) !important; } body .q-btn.text-primary:not(.bg-primary) { color:var(--m-text) !important; } body .q-btn.m-btn-tonal:not(.text-negative):not(.text-positive):not(.text-warning):not(.text-info):not(.text-secondary):not(.text-accent):not(.text-grey) { color:var(--m-text) !important; background:color-mix(in srgb, var(--m-text) 10%, var(--m-panel-bg)) !important; } body.body--dark .q-btn.bg-primary { color:#111111 !important; }"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OPENSTEP" colorModeEnumId="SCM_LIGHT" colorName="primary" colorValue="#5f5f5f"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OPENSTEP" colorModeEnumId="SCM_LIGHT" colorName="secondary" colorValue="#7a7a7a"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OPENSTEP" colorModeEnumId="SCM_LIGHT" colorName="accent" colorValue="#8a6d3b"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OPENSTEP" colorModeEnumId="SCM_LIGHT" colorName="positive" colorValue="#3d7a3f"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OPENSTEP" colorModeEnumId="SCM_LIGHT" colorName="negative" colorValue="#a8322d"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OPENSTEP" colorModeEnumId="SCM_LIGHT" colorName="info" colorValue="#2f5b91"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OPENSTEP" colorModeEnumId="SCM_LIGHT" colorName="warning" colorValue="#a86a12"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OPENSTEP" colorModeEnumId="SCM_LIGHT" colorName="page-bg" colorValue="#8f94a8"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OPENSTEP" colorModeEnumId="SCM_LIGHT" colorName="panel-bg" colorValue="#f3f3f5"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OPENSTEP" colorModeEnumId="SCM_LIGHT" colorName="header-bg" colorValue="#4a4b57"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OPENSTEP" colorModeEnumId="SCM_LIGHT" colorName="header-fg" colorValue="#f5f5f7"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OPENSTEP" colorModeEnumId="SCM_LIGHT" colorName="drawer-bg" colorValue="#b0b4c4"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OPENSTEP" colorModeEnumId="SCM_LIGHT" colorName="text" colorValue="#141419"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OPENSTEP" colorModeEnumId="SCM_LIGHT" colorName="text-muted" colorValue="#4b4d57"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OPENSTEP" colorModeEnumId="SCM_LIGHT" colorName="link" colorValue="#1f4e79"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OPENSTEP" colorModeEnumId="SCM_LIGHT" colorName="negative-text" colorValue="#7a1f1a"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OPENSTEP" colorModeEnumId="SCM_LIGHT" colorName="border" colorValue="#6a6c78"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OPENSTEP" colorModeEnumId="SCM_LIGHT" colorName="divider" colorValue="#9698a4"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OPENSTEP" colorModeEnumId="SCM_DARK" colorName="primary" colorValue="#9a9a9a"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OPENSTEP" colorModeEnumId="SCM_DARK" colorName="secondary" colorValue="#b0b0b0"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OPENSTEP" colorModeEnumId="SCM_DARK" colorName="accent" colorValue="#b08a5a"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OPENSTEP" colorModeEnumId="SCM_DARK" colorName="positive" colorValue="#5a9e5e"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OPENSTEP" colorModeEnumId="SCM_DARK" colorName="negative" colorValue="#c25a52"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OPENSTEP" colorModeEnumId="SCM_DARK" colorName="info" colorValue="#5d8ab8"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OPENSTEP" colorModeEnumId="SCM_DARK" colorName="warning" colorValue="#c08a3e"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OPENSTEP" colorModeEnumId="SCM_DARK" colorName="page-bg" colorValue="#1b1b20"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OPENSTEP" colorModeEnumId="SCM_DARK" colorName="panel-bg" colorValue="#2a2a31"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OPENSTEP" colorModeEnumId="SCM_DARK" colorName="header-bg" colorValue="#3a3a43"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OPENSTEP" colorModeEnumId="SCM_DARK" colorName="header-fg" colorValue="#f0f0f3"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OPENSTEP" colorModeEnumId="SCM_DARK" colorName="drawer-bg" colorValue="#232328"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OPENSTEP" colorModeEnumId="SCM_DARK" colorName="text" colorValue="#ececef"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OPENSTEP" colorModeEnumId="SCM_DARK" colorName="text-muted" colorValue="#a8a8b0"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OPENSTEP" colorModeEnumId="SCM_DARK" colorName="link" colorValue="#9dc3e6"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OPENSTEP" colorModeEnumId="SCM_DARK" colorName="negative-text" colorValue="#ffb4a8"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OPENSTEP" colorModeEnumId="SCM_DARK" colorName="border" colorValue="#686870"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="OPENSTEP" colorModeEnumId="SCM_DARK" colorName="divider" colorValue="#484850"/>
+
+    <!-- Windows 11: the Fluent look (the Mica grey desktop, white surfaces, the accent blue, 8px-rounded cards and 4px-rounded
+         controls, flat grey buttons with a thin border, the subtle card depth, and the accent tint on the selected rows, the active
+         items and the focus ring), with the dark Mica as its dark mode. The extra CSS rounds the corners, gives the cards their depth
+         and tints the selection with the accent; its default font (defaultFontBodyId) is Segoe UI until the user picks one. -->
+    <moqui.screen.ScreenColorScheme colorSchemeId="WINDOWS_11" screenThemeId="DEFAULT_QUASAR" sequenceNum="12" description="Windows 11"
+            defaultFontBodyId="SEGOE_UI"
+            extraCss="#top { border-bottom:1px solid var(--m-divider); } body #top .q-btn { background:transparent !important; border:0 !important; } body #top .q-btn:hover { background:rgba(0,0,0,.06) !important; } body.body--dark #top .q-btn:hover { background:rgba(255,255,255,.08) !important; } body :is(.q-card, .q-menu, .q-table__card, .q-date, .q-time, .m-record-header, .m-board-card, .m-board-col, .m-rich-text-box, .m-html-view-card) { border-radius:8px !important; } body :is(.q-btn:not(.q-btn--round), .q-field--outlined .q-field__control, .q-chip) { border-radius:4px !important; } body :is(.m-container-box, .q-card.m-board-card) { box-shadow:0 1.6px 3.6px rgba(0,0,0,.08), 0 0.3px 0.9px rgba(0,0,0,.05) !important; } body.body--dark :is(.m-container-box, .q-card.m-board-card) { box-shadow:0 1.6px 3.6px rgba(0,0,0,.45), 0 0.3px 0.9px rgba(0,0,0,.35) !important; } body .q-btn--flat:not(.m-link) { background:color-mix(in srgb, var(--m-text) 4%, var(--m-panel-bg)) !important; border:1px solid var(--m-border) !important; } body .q-btn--outline { background:transparent !important; } body .q-table tbody tr.selected td { background:color-mix(in srgb, var(--q-primary) 12%, var(--m-panel-bg)) !important; } body .q-table tbody tr.selected td:after { content:none !important; } body :is(.q-item.q-item--active, .q-item.q-router-link--active) { background:color-mix(in srgb, var(--q-primary) 12%, var(--m-panel-bg)) !important; } body .q-tree__node--selected &gt; .q-tree__node-header { background:color-mix(in srgb, var(--q-primary) 12%, var(--m-panel-bg)) !important; } body .m-board-card--selected { background:color-mix(in srgb, var(--q-primary) 12%, var(--m-panel-bg)) !important; border-color:var(--q-primary) !important; } body .m-drawer &gt; .q-item.m-drawer-on-path, body .m-drawer &gt; .q-item.m-drawer-current { background:color-mix(in srgb, var(--q-primary) 12%, var(--m-panel-bg)) !important; } body :focus-visible { outline:2px solid var(--q-primary) !important; outline-offset:1px; }"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="WINDOWS_11" colorModeEnumId="SCM_LIGHT" colorName="primary" colorValue="#0067c0"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="WINDOWS_11" colorModeEnumId="SCM_LIGHT" colorName="secondary" colorValue="#005b70"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="WINDOWS_11" colorModeEnumId="SCM_LIGHT" colorName="accent" colorValue="#5b26b5"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="WINDOWS_11" colorModeEnumId="SCM_LIGHT" colorName="positive" colorValue="#0e7006"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="WINDOWS_11" colorModeEnumId="SCM_LIGHT" colorName="negative" colorValue="#c42b1c"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="WINDOWS_11" colorModeEnumId="SCM_LIGHT" colorName="info" colorValue="#005f87"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="WINDOWS_11" colorModeEnumId="SCM_LIGHT" colorName="warning" colorValue="#9d5d00"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="WINDOWS_11" colorModeEnumId="SCM_LIGHT" colorName="page-bg" colorValue="#f3f3f3"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="WINDOWS_11" colorModeEnumId="SCM_LIGHT" colorName="panel-bg" colorValue="#ffffff"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="WINDOWS_11" colorModeEnumId="SCM_LIGHT" colorName="header-bg" colorValue="#ffffff"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="WINDOWS_11" colorModeEnumId="SCM_LIGHT" colorName="header-fg" colorValue="#1a1a1a"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="WINDOWS_11" colorModeEnumId="SCM_LIGHT" colorName="drawer-bg" colorValue="#f9f9f9"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="WINDOWS_11" colorModeEnumId="SCM_LIGHT" colorName="text" colorValue="#1a1a1a"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="WINDOWS_11" colorModeEnumId="SCM_LIGHT" colorName="text-muted" colorValue="#616161"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="WINDOWS_11" colorModeEnumId="SCM_LIGHT" colorName="link" colorValue="#005fb8"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="WINDOWS_11" colorModeEnumId="SCM_LIGHT" colorName="negative-text" colorValue="#b02a1d"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="WINDOWS_11" colorModeEnumId="SCM_LIGHT" colorName="border" colorValue="#d6d6d6"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="WINDOWS_11" colorModeEnumId="SCM_LIGHT" colorName="divider" colorValue="#e5e5e5"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="WINDOWS_11" colorModeEnumId="SCM_DARK" colorName="primary" colorValue="#60cdff"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="WINDOWS_11" colorModeEnumId="SCM_DARK" colorName="secondary" colorValue="#35c2a0"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="WINDOWS_11" colorModeEnumId="SCM_DARK" colorName="accent" colorValue="#c29fff"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="WINDOWS_11" colorModeEnumId="SCM_DARK" colorName="positive" colorValue="#63b363"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="WINDOWS_11" colorModeEnumId="SCM_DARK" colorName="negative" colorValue="#ff99a4"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="WINDOWS_11" colorModeEnumId="SCM_DARK" colorName="info" colorValue="#4cc2ff"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="WINDOWS_11" colorModeEnumId="SCM_DARK" colorName="warning" colorValue="#e8a33d"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="WINDOWS_11" colorModeEnumId="SCM_DARK" colorName="page-bg" colorValue="#202020"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="WINDOWS_11" colorModeEnumId="SCM_DARK" colorName="panel-bg" colorValue="#2b2b2b"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="WINDOWS_11" colorModeEnumId="SCM_DARK" colorName="header-bg" colorValue="#2b2b2b"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="WINDOWS_11" colorModeEnumId="SCM_DARK" colorName="header-fg" colorValue="#ffffff"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="WINDOWS_11" colorModeEnumId="SCM_DARK" colorName="drawer-bg" colorValue="#272727"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="WINDOWS_11" colorModeEnumId="SCM_DARK" colorName="text" colorValue="#ffffff"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="WINDOWS_11" colorModeEnumId="SCM_DARK" colorName="text-muted" colorValue="#a1a1a1"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="WINDOWS_11" colorModeEnumId="SCM_DARK" colorName="link" colorValue="#74c0e8"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="WINDOWS_11" colorModeEnumId="SCM_DARK" colorName="negative-text" colorValue="#ff99a4"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="WINDOWS_11" colorModeEnumId="SCM_DARK" colorName="border" colorValue="#3d3d3d"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="WINDOWS_11" colorModeEnumId="SCM_DARK" colorName="divider" colorValue="#333333"/>
+
+    <!-- Plasma: the KDE Plasma (Breeze) look (the light grey desktop, white surfaces, the Breeze blue, 3px-rounded cards and
+         2px-rounded controls, flat buttons with a thin border, and the solid accent selection with white text), with the Breeze
+         dark as its dark mode. The extra CSS rounds the corners, gives the cards their depth and fills the selection with the
+         accent; its default font (defaultFontBodyId) is Noto Sans until the user picks one. -->
+    <moqui.screen.ScreenColorScheme colorSchemeId="PLASMA" screenThemeId="DEFAULT_QUASAR" sequenceNum="13" description="Plasma"
+            defaultFontBodyId="NOTO_SANS"
+            extraCss="#top { border-bottom:1px solid var(--m-divider); } body #top .q-btn { background:transparent !important; border:0 !important; } body #top .q-btn:hover { background:rgba(0,0,0,.06) !important; } body.body--dark #top .q-btn:hover { background:rgba(255,255,255,.08) !important; } body :is(.q-card, .q-menu, .q-table__card, .q-date, .q-time, .m-record-header, .m-board-card, .m-board-col, .m-rich-text-box, .m-html-view-card) { border-radius:3px !important; } body :is(.q-btn:not(.q-btn--round), .q-field--outlined .q-field__control, .q-chip) { border-radius:2px !important; } body :is(.m-container-box, .q-card.m-board-card) { box-shadow:0 1px 2px rgba(0,0,0,.12), 0 0 0 1px rgba(0,0,0,.04) !important; } body.body--dark :is(.m-container-box, .q-card.m-board-card) { box-shadow:0 1px 2px rgba(0,0,0,.5) !important; } body .q-btn--flat:not(.m-link) { background:color-mix(in srgb, var(--m-text) 4%, var(--m-panel-bg)) !important; border:1px solid var(--m-border) !important; } body .q-btn--flat:not(.m-link):hover { background:color-mix(in srgb, var(--q-primary) 12%, var(--m-panel-bg)) !important; } body .q-btn--outline { background:transparent !important; } body .q-table tbody tr.selected td { background:var(--q-primary) !important; color:#ffffff !important; } body .q-table tbody tr.selected td:after { content:none !important; } body :is(.q-item.q-item--active, .q-item.q-router-link--active) { background:var(--q-primary) !important; color:#ffffff !important; } body .q-tree__node--selected &gt; .q-tree__node-header { background:var(--q-primary) !important; color:#ffffff !important; } body .m-board-card--selected { background:var(--q-primary) !important; color:#ffffff !important; border-color:var(--q-primary) !important; } body .m-drawer &gt; .q-item.m-drawer-on-path, body .m-drawer &gt; .q-item.m-drawer-current { background:var(--q-primary) !important; color:#ffffff !important; } body :focus-visible { outline:2px solid var(--q-primary) !important; outline-offset:1px; }"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="PLASMA" colorModeEnumId="SCM_LIGHT" colorName="primary" colorValue="#3daee9"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="PLASMA" colorModeEnumId="SCM_LIGHT" colorName="secondary" colorValue="#27ae60"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="PLASMA" colorModeEnumId="SCM_LIGHT" colorName="accent" colorValue="#7d51ad"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="PLASMA" colorModeEnumId="SCM_LIGHT" colorName="positive" colorValue="#27ae60"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="PLASMA" colorModeEnumId="SCM_LIGHT" colorName="negative" colorValue="#da4453"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="PLASMA" colorModeEnumId="SCM_LIGHT" colorName="info" colorValue="#2980b9"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="PLASMA" colorModeEnumId="SCM_LIGHT" colorName="warning" colorValue="#edb641"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="PLASMA" colorModeEnumId="SCM_LIGHT" colorName="page-bg" colorValue="#eff0f1"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="PLASMA" colorModeEnumId="SCM_LIGHT" colorName="panel-bg" colorValue="#ffffff"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="PLASMA" colorModeEnumId="SCM_LIGHT" colorName="header-bg" colorValue="#eff0f1"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="PLASMA" colorModeEnumId="SCM_LIGHT" colorName="header-fg" colorValue="#31363b"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="PLASMA" colorModeEnumId="SCM_LIGHT" colorName="drawer-bg" colorValue="#f7f7f7"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="PLASMA" colorModeEnumId="SCM_LIGHT" colorName="text" colorValue="#31363b"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="PLASMA" colorModeEnumId="SCM_LIGHT" colorName="text-muted" colorValue="#7f8c8d"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="PLASMA" colorModeEnumId="SCM_LIGHT" colorName="link" colorValue="#2980b9"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="PLASMA" colorModeEnumId="SCM_LIGHT" colorName="negative-text" colorValue="#b5202c"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="PLASMA" colorModeEnumId="SCM_LIGHT" colorName="border" colorValue="#bfc2c7"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="PLASMA" colorModeEnumId="SCM_LIGHT" colorName="divider" colorValue="#c8cacd"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="PLASMA" colorModeEnumId="SCM_DARK" colorName="primary" colorValue="#29b6d6"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="PLASMA" colorModeEnumId="SCM_DARK" colorName="secondary" colorValue="#2ee197"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="PLASMA" colorModeEnumId="SCM_DARK" colorName="accent" colorValue="#c060d6"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="PLASMA" colorModeEnumId="SCM_DARK" colorName="positive" colorValue="#43c6ac"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="PLASMA" colorModeEnumId="SCM_DARK" colorName="negative" colorValue="#ef5b6b"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="PLASMA" colorModeEnumId="SCM_DARK" colorName="info" colorValue="#38b6d8"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="PLASMA" colorModeEnumId="SCM_DARK" colorName="warning" colorValue="#f7c853"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="PLASMA" colorModeEnumId="SCM_DARK" colorName="page-bg" colorValue="#232629"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="PLASMA" colorModeEnumId="SCM_DARK" colorName="panel-bg" colorValue="#2a2e32"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="PLASMA" colorModeEnumId="SCM_DARK" colorName="header-bg" colorValue="#2a2e32"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="PLASMA" colorModeEnumId="SCM_DARK" colorName="header-fg" colorValue="#eff0f1"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="PLASMA" colorModeEnumId="SCM_DARK" colorName="drawer-bg" colorValue="#26292d"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="PLASMA" colorModeEnumId="SCM_DARK" colorName="text" colorValue="#eff0f1"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="PLASMA" colorModeEnumId="SCM_DARK" colorName="text-muted" colorValue="#a3a8a9"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="PLASMA" colorModeEnumId="SCM_DARK" colorName="link" colorValue="#63cbe8"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="PLASMA" colorModeEnumId="SCM_DARK" colorName="negative-text" colorValue="#f48791"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="PLASMA" colorModeEnumId="SCM_DARK" colorName="border" colorValue="#4d5256"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="PLASMA" colorModeEnumId="SCM_DARK" colorName="divider" colorValue="#3f4347"/>
+
+    <!-- Rainbow: the pride flag, unapologetic (the flag across the header, the primary buttons and the drawer's current app, a
+         pastel rainbow wash on the page, rainbow-tinted selection and card edges, purple focus), with the flag over charcoal and
+         brighter flag steps as its dark mode. -->
+    <moqui.screen.ScreenColorScheme colorSchemeId="RAINBOW" screenThemeId="DEFAULT_QUASAR" sequenceNum="14" description="Rainbow"
+            extraCss="body:not(.body--dark) #top { background:linear-gradient(90deg,#732982 0%,#24408e 20%,#008026 40%,#ffd500 52%,#ff8c00 68%,#e40303 85%,#a60000 100%) !important; text-shadow:0 1px 2px rgba(0,0,0,.4) !important; } body.body--dark #top { background:linear-gradient(90deg,rgba(115,41,130,.9),rgba(36,64,142,.9) 20%,rgba(0,128,38,.9) 40%,rgba(255,213,0,.75) 52%,rgba(255,140,0,.85) 68%,rgba(228,3,3,.9) 100%),#232326 !important; text-shadow:0 1px 2px rgba(0,0,0,.5) !important; } body:not(.body--dark) { background:linear-gradient(135deg,#fdecec 0%,#fef3e6 18%,#fdfbe6 36%,#eafaf0 54%,#eaf0fb 72%,#f3ecf8 100%) !important; } body:not(.body--dark) .q-page { background:linear-gradient(135deg,#fdecec 0%,#fef3e6 18%,#fdfbe6 36%,#eafaf0 54%,#eaf0fb 72%,#f3ecf8 100%) !important; } body.body--dark { background:linear-gradient(135deg,#241a1e 0%,#241e18 18%,#23221a 36%,#1a231e 54%,#1a1e26 72%,#211a24 100%) !important; } body :is(.q-btn.bg-primary, .q-btn--primary):not(.q-btn--flat):not(.q-btn--round) { background-image:linear-gradient(90deg,#e40303 0%,#ff8c00 20%,#ffed00 40%,#008026 60%,#24408e 80%,#732982 100%) !important; color:#ffffff !important; text-shadow:0 1px 1px rgba(0,0,0,.35) !important; } body.body--dark :is(.q-btn.bg-primary, .q-btn--primary):not(.q-btn--flat):not(.q-btn--round) { background-image:linear-gradient(90deg,#ff6b6b 0%,#ffa64d 20%,#ffe95c 40%,#4cd97b 60%,#5c7cfa 80%,#b07ce8 100%) !important; } body .m-drawer &gt; .q-item.m-drawer-current { background:linear-gradient(90deg,#e40303 0%,#ff8c00 25%,#ffed00 50%,#008026 75%,#24408e 100%) !important; color:#ffffff !important; text-shadow:0 1px 1px rgba(0,0,0,.35) !important; } body.body--dark .m-drawer &gt; .q-item.m-drawer-current { background:linear-gradient(90deg,#ff6b6b 0%,#ffa64d 25%,#ffe95c 50%,#4cd97b 75%,#5c7cfa 100%) !important; } body .m-drawer &gt; .q-item.m-drawer-on-path { background:color-mix(in srgb,var(--q-accent) 12%,var(--m-drawer-bg)) !important; } body .q-table tbody tr.selected td { background:linear-gradient(90deg,rgba(228,3,3,.12),rgba(255,140,0,.12) 25%,rgba(255,237,0,.18) 50%,rgba(0,128,38,.12) 75%,rgba(36,64,142,.12)) !important; } body .q-table tbody tr.selected td:after { content:none !important; } body :is(.q-item.q-item--active, .q-item.q-router-link--active) { background:color-mix(in srgb,var(--q-accent) 14%,var(--m-panel-bg)) !important; } body :is(.m-container-box, .q-card.m-board-card) { border:1px solid transparent; border-top:3px solid transparent; background:linear-gradient(var(--m-panel-bg),var(--m-panel-bg)) padding-box,linear-gradient(90deg,#e40303,#ff8c00 20%,#ffed00 40%,#008026 60%,#24408e 80%,#732982) border-box !important; } body :focus-visible { outline:2px solid var(--q-accent) !important; outline-offset:1px; }"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="RAINBOW" colorModeEnumId="SCM_LIGHT" colorName="primary" colorValue="#e40303"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="RAINBOW" colorModeEnumId="SCM_LIGHT" colorName="secondary" colorValue="#ff8c00"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="RAINBOW" colorModeEnumId="SCM_LIGHT" colorName="accent" colorValue="#732982"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="RAINBOW" colorModeEnumId="SCM_LIGHT" colorName="positive" colorValue="#008026"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="RAINBOW" colorModeEnumId="SCM_LIGHT" colorName="negative" colorValue="#c00000"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="RAINBOW" colorModeEnumId="SCM_LIGHT" colorName="info" colorValue="#24408e"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="RAINBOW" colorModeEnumId="SCM_LIGHT" colorName="warning" colorValue="#f0a500"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="RAINBOW" colorModeEnumId="SCM_LIGHT" colorName="page-bg" colorValue="#ffffff"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="RAINBOW" colorModeEnumId="SCM_LIGHT" colorName="panel-bg" colorValue="#ffffff"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="RAINBOW" colorModeEnumId="SCM_LIGHT" colorName="header-bg" colorValue="#732982"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="RAINBOW" colorModeEnumId="SCM_LIGHT" colorName="header-fg" colorValue="#ffffff"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="RAINBOW" colorModeEnumId="SCM_LIGHT" colorName="drawer-bg" colorValue="#ffffff"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="RAINBOW" colorModeEnumId="SCM_LIGHT" colorName="text" colorValue="#1d1d1f"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="RAINBOW" colorModeEnumId="SCM_LIGHT" colorName="text-muted" colorValue="#5a5a5e"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="RAINBOW" colorModeEnumId="SCM_LIGHT" colorName="link" colorValue="#732982"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="RAINBOW" colorModeEnumId="SCM_LIGHT" colorName="negative-text" colorValue="#c00000"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="RAINBOW" colorModeEnumId="SCM_LIGHT" colorName="border" colorValue="#d9d9de"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="RAINBOW" colorModeEnumId="SCM_LIGHT" colorName="divider" colorValue="#e8e8ec"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="RAINBOW" colorModeEnumId="SCM_DARK" colorName="primary" colorValue="#ff6b6b"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="RAINBOW" colorModeEnumId="SCM_DARK" colorName="secondary" colorValue="#ffa64d"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="RAINBOW" colorModeEnumId="SCM_DARK" colorName="accent" colorValue="#b07ce8"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="RAINBOW" colorModeEnumId="SCM_DARK" colorName="positive" colorValue="#4cd97b"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="RAINBOW" colorModeEnumId="SCM_DARK" colorName="negative" colorValue="#ff8787"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="RAINBOW" colorModeEnumId="SCM_DARK" colorName="info" colorValue="#5c7cfa"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="RAINBOW" colorModeEnumId="SCM_DARK" colorName="warning" colorValue="#e8c33e"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="RAINBOW" colorModeEnumId="SCM_DARK" colorName="page-bg" colorValue="#1d1d1f"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="RAINBOW" colorModeEnumId="SCM_DARK" colorName="panel-bg" colorValue="#26262a"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="RAINBOW" colorModeEnumId="SCM_DARK" colorName="header-bg" colorValue="#232326"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="RAINBOW" colorModeEnumId="SCM_DARK" colorName="header-fg" colorValue="#ffffff"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="RAINBOW" colorModeEnumId="SCM_DARK" colorName="drawer-bg" colorValue="#232326"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="RAINBOW" colorModeEnumId="SCM_DARK" colorName="text" colorValue="#f2f2f4"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="RAINBOW" colorModeEnumId="SCM_DARK" colorName="text-muted" colorValue="#a0a0a6"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="RAINBOW" colorModeEnumId="SCM_DARK" colorName="link" colorValue="#b07ce8"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="RAINBOW" colorModeEnumId="SCM_DARK" colorName="negative-text" colorValue="#ff9e9e"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="RAINBOW" colorModeEnumId="SCM_DARK" colorName="border" colorValue="#3d3d44"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="RAINBOW" colorModeEnumId="SCM_DARK" colorName="divider" colorValue="#333338"/>
+
+    <!-- Lab: the Moqui Labs look (moquilabs.com): the near-black surfaces with the hot pink and cyan neon, the dark header with its
+         pink-to-cyan underline and glow, the neon wash on the page, the glowing primary buttons, the pink selection with the cyan
+         focus, and Orbitron headings with Barlow body text (the scheme's default fonts, so their style sheets load); the light mode keeps the brand's dark header. -->
+    <moqui.screen.ScreenColorScheme colorSchemeId="LAB" screenThemeId="DEFAULT_QUASAR" sequenceNum="15" description="Lab"
+            defaultFontHeadingId="ORBITRON" defaultFontBodyId="BARLOW"
+            extraCss="#top { border-bottom:2px solid transparent; background:linear-gradient(var(--m-header-bg),var(--m-header-bg)) padding-box,linear-gradient(90deg,#ff0080,#b44cff 50%,#00ffff) border-box !important; box-shadow:0 2px 18px rgba(255,0,128,.25) !important; } body:not(.body--dark) { background:radial-gradient(900px 300px at 15% -80px,rgba(212,0,110,.1),transparent),radial-gradient(900px 300px at 85% -80px,rgba(0,143,176,.1),transparent),var(--m-page-bg) !important; } body:not(.body--dark) .q-page { background:radial-gradient(900px 300px at 15% -80px,rgba(212,0,110,.1),transparent),radial-gradient(900px 300px at 85% -80px,rgba(0,143,176,.1),transparent),var(--m-page-bg) !important; } body.body--dark { background:radial-gradient(900px 300px at 15% -80px,rgba(255,0,128,.14),transparent),radial-gradient(900px 300px at 85% -80px,rgba(0,255,255,.1),transparent),var(--m-page-bg) !important; } body:not(.body--dark) :is(.q-btn.bg-primary, .q-btn--primary):not(.q-btn--flat):not(.q-btn--round) { background-image:linear-gradient(135deg,#d4006e,#7b2ff7) !important; box-shadow:0 0 12px rgba(212,0,110,.4) !important; } body.body--dark :is(.q-btn.bg-primary, .q-btn--primary):not(.q-btn--flat):not(.q-btn--round) { background-image:linear-gradient(135deg,#ff0080,#b44cff) !important; box-shadow:0 0 12px rgba(255,0,128,.45) !important; } body .m-drawer &gt; .q-item.m-drawer-current { background:color-mix(in srgb,var(--q-primary) 14%,var(--m-drawer-bg)) !important; box-shadow:inset 3px 0 0 var(--q-primary) !important; } body .m-drawer &gt; .q-item.m-drawer-on-path { background:color-mix(in srgb,var(--q-secondary) 10%,var(--m-drawer-bg)) !important; } body .q-table tbody tr.selected td { background:color-mix(in srgb,var(--q-primary) 12%,var(--m-panel-bg)) !important; } body .q-table tbody tr.selected td:after { content:none !important; } body :is(.q-item.q-item--active, .q-item.q-router-link--active) { background:color-mix(in srgb,var(--q-primary) 12%,var(--m-panel-bg)) !important; } body :focus-visible { outline:2px solid var(--q-secondary) !important; outline-offset:1px; } body :is(h1, .text-h1) { text-shadow:0 0 14px color-mix(in srgb,var(--q-primary) 40%,transparent); }"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="LAB" colorModeEnumId="SCM_LIGHT" colorName="primary" colorValue="#d4006e"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="LAB" colorModeEnumId="SCM_LIGHT" colorName="secondary" colorValue="#0090b0"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="LAB" colorModeEnumId="SCM_LIGHT" colorName="accent" colorValue="#7b2ff7"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="LAB" colorModeEnumId="SCM_LIGHT" colorName="positive" colorValue="#009e60"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="LAB" colorModeEnumId="SCM_LIGHT" colorName="negative" colorValue="#e62449"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="LAB" colorModeEnumId="SCM_LIGHT" colorName="info" colorValue="#0083c9"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="LAB" colorModeEnumId="SCM_LIGHT" colorName="warning" colorValue="#e68a00"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="LAB" colorModeEnumId="SCM_LIGHT" colorName="page-bg" colorValue="#f5f5fa"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="LAB" colorModeEnumId="SCM_LIGHT" colorName="panel-bg" colorValue="#ffffff"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="LAB" colorModeEnumId="SCM_LIGHT" colorName="header-bg" colorValue="#0a0a0f"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="LAB" colorModeEnumId="SCM_LIGHT" colorName="header-fg" colorValue="#ffffff"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="LAB" colorModeEnumId="SCM_LIGHT" colorName="drawer-bg" colorValue="#fbfbfe"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="LAB" colorModeEnumId="SCM_LIGHT" colorName="text" colorValue="#16161e"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="LAB" colorModeEnumId="SCM_LIGHT" colorName="text-muted" colorValue="#5c5c6e"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="LAB" colorModeEnumId="SCM_LIGHT" colorName="link" colorValue="#0087a8"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="LAB" colorModeEnumId="SCM_LIGHT" colorName="negative-text" colorValue="#c21f45"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="LAB" colorModeEnumId="SCM_LIGHT" colorName="border" colorValue="#d8d8e4"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="LAB" colorModeEnumId="SCM_LIGHT" colorName="divider" colorValue="#e4e4ee"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="LAB" colorModeEnumId="SCM_DARK" colorName="primary" colorValue="#ff0080"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="LAB" colorModeEnumId="SCM_DARK" colorName="secondary" colorValue="#00c8d8"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="LAB" colorModeEnumId="SCM_DARK" colorName="accent" colorValue="#b44cff"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="LAB" colorModeEnumId="SCM_DARK" colorName="positive" colorValue="#00e676"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="LAB" colorModeEnumId="SCM_DARK" colorName="negative" colorValue="#ff1744"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="LAB" colorModeEnumId="SCM_DARK" colorName="info" colorValue="#00b0ff"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="LAB" colorModeEnumId="SCM_DARK" colorName="warning" colorValue="#ffab00"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="LAB" colorModeEnumId="SCM_DARK" colorName="page-bg" colorValue="#0a0a0f"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="LAB" colorModeEnumId="SCM_DARK" colorName="panel-bg" colorValue="#12121a"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="LAB" colorModeEnumId="SCM_DARK" colorName="header-bg" colorValue="#0d0d14"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="LAB" colorModeEnumId="SCM_DARK" colorName="header-fg" colorValue="#f2f2f7"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="LAB" colorModeEnumId="SCM_DARK" colorName="drawer-bg" colorValue="#0e0e15"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="LAB" colorModeEnumId="SCM_DARK" colorName="text" colorValue="#f2f2f7"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="LAB" colorModeEnumId="SCM_DARK" colorName="text-muted" colorValue="#8a8a99"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="LAB" colorModeEnumId="SCM_DARK" colorName="link" colorValue="#00ffff"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="LAB" colorModeEnumId="SCM_DARK" colorName="negative-text" colorValue="#ff5c7a"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="LAB" colorModeEnumId="SCM_DARK" colorName="border" colorValue="#2a2a38"/>
+    <moqui.screen.ScreenColorSchemeColor colorSchemeId="LAB" colorModeEnumId="SCM_DARK" colorName="divider" colorValue="#22222e"/>
     <!-- Quasar configuration (JSON merged over the shell's defaults): brand colors, notify, loadingBar. For example:
     <moqui.screen.ScreenThemeResource screenThemeId="DEFAULT_QUASAR" sequenceNum="50" resourceTypeEnumId="STRT_QUASAR_CONFIG"
             resourceValue="{&quot;brand&quot;:{&quot;primary&quot;:&quot;#1565c0&quot;,&quot;secondary&quot;:&quot;#00897b&quot;}}"/> -->
+    <!-- The theme's default color scheme (a ScreenColorScheme id of the theme): the scheme a user gets without an own choice, so a
+        corporate look is the theme's default (the System app's Theme screen keeps it too). For example:
+    <moqui.screen.ScreenThemeResource screenThemeId="DEFAULT_QUASAR" sequenceNum="51" resourceTypeEnumId="STRT_DEFAULT_COLOR_SCHEME"
+            resourceValue="SLATE"/> -->
+    <!-- The user appearance policy (STRT_APPEARANCE_POLICY, JSON; docs/ui/Qvt-Client.md, Appearance): what a user may change. An
+        absent policy allows everything; this one keeps the accent the scheme's primary, so a scheme's look stays whole. A theme for
+        a fixed station could set {"appearance": false}, or {"mode": "dark", "scheme": false}. -->
+    <moqui.screen.ScreenThemeResource screenThemeId="DEFAULT_QUASAR" sequenceNum="52" resourceTypeEnumId="STRT_APPEARANCE_POLICY"
+            resourceValue="{&quot;accent&quot;: false}"/>
 
     <!-- Logo, icon, body class -->
     <moqui.screen.ScreenThemeResource screenThemeId="DEFAULT_QUASAR" sequenceNum="100" resourceTypeEnumId="STRT_HEADER_LOGO"
