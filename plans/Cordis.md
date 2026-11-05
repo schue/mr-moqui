@@ -1,10 +1,13 @@
 # Cordis Runtime Refactor
 
-Status: draft, in progress. Explores refactoring the framework onto a
+Status 2026-11-05: draft, decided against. Explores refactoring the framework onto a
 [Cordis](https://github.com/dshbox/cordis-rs)-like structure: a typed runtime for
 plugin-oriented Rust applications (`Context`, `Plugin` → `prepare`/`Input`/
 `PreparedPlugin` → `spawn` → `FiberHandle`, typed `Service` with realms, typed
 routed `Event`, apply-generation resource ownership, no runtime-wide shutdown).
+The review below is why the runtime port is rejected; what replaces it is
+[MoquiOnDSH](MoquiOnDSH.md). This document is kept whole as the record of the
+comparison.
 
 ## The core mismatch to decide first
 

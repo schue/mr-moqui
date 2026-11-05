@@ -26,6 +26,10 @@ Design, status and review documents for MR Moqui. User guides for built features
 - [Monitoring.md](Monitoring.md): the monitoring, diagnosis and recovery requirements, the architecture, the M1–M7 plan (built: telemetry pipeline and indexes, OTLP in and out, the Monitor and Dashboards apps) and the Later stages. Guide: [Monitoring](../docs/tools/Monitoring.md).
 - [Monitor-Settings.md](Monitor-Settings.md): Monitor › Settings (built; the live dev-server check is open), in-memory overrides of log levels and telemetry settings that expire on their own, with the on-disk conf values always shown and a revert to them.
 
+**Runtime and harness interop**
+- [MoquiOnDSH.md](MoquiOnDSH.md): Moqui as the system of record behind a DeepSeek Harness (`dsh`), over MCP and A2A: the tool surface (built), the screen surface (built), the record (sessions, usage, invoices), the billing join for client work, the guardrails, and Phases 0–6 with their gates. No code yet; Phase 0 is a two-day spike.
+- [Cordis.md](Cordis.md): the rejected alternative, kept whole as the record: porting the framework's subsystem runtime onto [cordis-rs](https://github.com/dshbox/cordis-rs), the comparison, and the review that decided against it (four verified blockers, and a shared runtime cannot serve the exchange because DSH vendors Cordis for JavaScript).
+
 **Dev tools**
 - [design-dev-aide.md](design-dev-aide.md): Dev AIDE, the assisted IDE at `/qapps/dev`: workspace, editor, git, live reload, the artifact index and browser, the entity modeler, service writer and screen builder, and the dev agent.
 - [Autodoc.md](Autodoc.md): generated Markdown docs for entities, services, screens, ECA rules and REST APIs, by template, with Mermaid diagrams; shown in the Dev AIDE, exported to a repository, and `moqui autodoc`.
