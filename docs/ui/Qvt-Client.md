@@ -479,8 +479,8 @@ and token name without its prefix (`primary`, `page-bg`, ...).
   - In dark mode, `panel-bg` and `page-bg` are also `--q-dark` and `--q-dark-page`, which Quasar's dark components use.
   - A name or value with a character that could end its declaration is logged and left out.
 - The scheme's `extraCss` comes after the colors, for what is not a color. An administrator writes it; nothing a user enters goes there.
-- `WebrootQuasarThemeData.xml` seeds Default (no colors), Slate, Forest, Warm and High Contrast for `DEFAULT_QUASAR`.
-- The fonts are `ScreenFontOption` rows: a sans, serif or mono kind, a `font-family` stack and an optional style sheet.
+- `WebrootQuasarThemeData.xml` seeds Default (no colors), Slate, Forest, Warm, High Contrast, Ocean, Indigo, Crimson, Teal, Graphite, OpenStep (the NeXTSTEP/OpenStep look, with a charcoal dark mode), Windows 11 (the Fluent look, with the dark Mica mode), Plasma (the KDE Plasma/Breeze look, with the Breeze dark mode), Rainbow (the pride flag, with the flag-over-charcoal dark mode) and Lab (the Moqui Labs neon look, with the brand's dark header in light mode) for `DEFAULT_QUASAR`; the corporate schemes (Slate, Forest, Warm, Ocean, Indigo, Crimson, Teal) carry their look in `extraCss`: the brand-gradient header, the page wash, the gradient primary buttons and the complementary accent on the drawer's current app.
+- The fonts are `ScreenFontOption` rows: a sans, serif or mono kind, a `font-family` stack and an optional style sheet. `WebrootQuasarThemeData.xml` seeds fifteen: nine sans (System, Roboto, Inter, Source Sans 3, Atkinson Hyperlegible, Orbitron, Barlow, Segoe UI, Noto Sans), three serif and three mono; the web fonts load from Google Fonts, as the theme's Roboto does.
 - A scheme names its own fonts in `defaultFontBodyId`, `defaultFontHeadingId` and `defaultFontMonoId`, used for a role the user
   has chosen no font for. Set a scheme's font there, not as `--m-font-*` in its `extraCss`: there its style sheet is never linked.
 
